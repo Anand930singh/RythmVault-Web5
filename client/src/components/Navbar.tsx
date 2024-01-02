@@ -1,5 +1,6 @@
 import { IoSearchOutline } from "react-icons/io5";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import "../index.css";
 
@@ -16,20 +17,20 @@ export default function Navbar({ loggedIn }: NavProps) {
           className="w-10 aspect-square rounded-full object-cover"
         />
 
-        <div className="font-bold text-slate-100 text-2xl tracking-wider jockey-font">
+        <div className="font-bold md:flex hidden text-slate-100 text-2xl tracking-wider jockey-font">
           RhythmVault
         </div>
 
-        <div className="h-10 ml-4 w-[2px] rounded bg-slate-300"></div>
+        <div className="h-10 ml-4 w-[2px] lg:flex hidden rounded bg-slate-300"></div>
       </div>
 
-      <div className="flex gap-3 text-slate-400">
-        <Link to='/'>
+      <div className="lg:flex hidden gap-3 text-slate-400">
+        <Link to="/">
           <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
             Dashboard
           </div>
         </Link>
-        <Link to='/upload'>
+        <Link to="/upload">
           <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
             Create
           </div>
@@ -39,8 +40,8 @@ export default function Navbar({ loggedIn }: NavProps) {
         </div>
       </div>
 
-      <div className="flex items-center gap-5">
-        <div className="flex relative items-center">
+      <div className="flex items-center gap-3 lg:gap-5">
+        <div className="lg:flex hidden relative items-center">
           <input
             type="text"
             placeholder="Search"
@@ -49,18 +50,24 @@ export default function Navbar({ loggedIn }: NavProps) {
           <IoSearchOutline className="absolute left-1 text-white ml-1 pointer-events-none text-xl" />
         </div>
 
+        <IoSearchOutline className="lg:hidden flex text-white text-xl" />
+
+        <button className="lg:hidden text-slate-200 flex rounded p-1 text-2xl">
+          <RxHamburgerMenu />
+        </button>
+
         {!loggedIn && (
           <>
             <button
               type="button"
-              className="font-semibold text-base border border-transparent hover:border hover:border-slate-200 inline-flex justify-center items-center gap-2 focus:outline-none text-slate-300 rounded-3xl py-2.5 px-5"
+              className="hidden font-semibold text-base border border-transparent hover:border hover:border-slate-200 sm:inline-flex justify-center items-center gap-2 focus:outline-none text-slate-300 rounded-3xl py-2.5 px-5"
             >
               Log in
             </button>
 
             <button
               type="button"
-              className="rounded-full flex bg-blue-600 hover:bg-blue-500 text-white border-transparent focus:dark:bg-blue-600 focus:ring focus:ring-offset-2 focus:ring-offset-slate-400 focus:ring-blue-600 dark:focus:ring-offset-slate-400 disabled:bg-blue-200 disabled:cursor-not-allowed disabled:dark:bg-blue-900 disabled:dark:text-slate-400 text-base py-2.5 px-5"
+              className="hidden rounded-full sm:flex bg-blue-600 hover:bg-blue-500 text-white border-transparent focus:dark:bg-blue-600 focus:ring focus:ring-offset-2 focus:ring-offset-slate-400 focus:ring-blue-600 dark:focus:ring-offset-slate-400 disabled:bg-blue-200 disabled:cursor-not-allowed disabled:dark:bg-blue-900 disabled:dark:text-slate-400 text-base py-2.5 px-5"
             >
               Sign up
             </button>

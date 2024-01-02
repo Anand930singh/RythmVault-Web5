@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -23,6 +24,7 @@ export default function App() {
         {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/upload" element={<Upload />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

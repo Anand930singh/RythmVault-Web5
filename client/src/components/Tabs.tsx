@@ -42,7 +42,7 @@ export default function Tabs({ tabsList }: TabsListProps) {
         ))}
       </div>
 
-      <div className="w-full rounded p-3">
+      <div className="w-full rounded md:p-3 p-1">
         {/* Render only the component of the active tab */}
         {activeTabData && (
           <div key={activeTabData.id} className="w-full">
