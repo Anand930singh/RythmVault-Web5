@@ -24,12 +24,16 @@ export default function Navbar({ loggedIn }: NavProps) {
       </div>
 
       <div className="flex gap-3 text-slate-400">
-        <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
-          Dashboard
-        </div>
-        <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
-          Create
-        </div>
+        <Link to='/'>
+          <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
+            Dashboard
+          </div>
+        </Link>
+        <Link to='/upload'>
+          <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
+            Create
+          </div>
+        </Link>
         <div className="cursor-pointer flex flex-col after:w-0 after:h-[2px] hover:after:w-full text-slate-300 font-semibold after:transition-[width] after:duration-300 after:rounded after:bg-slate-300">
           Stats
         </div>
