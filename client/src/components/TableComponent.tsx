@@ -1,5 +1,3 @@
-import React from "react";
-
 type TableComponentProps = {
   index: number;
   amt: number;
