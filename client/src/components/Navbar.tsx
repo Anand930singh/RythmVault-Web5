@@ -3,6 +3,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import "../index.css";
+import Wallet from "./Wallet";
 
 type NavProps = {
   loggedIn: boolean;
@@ -58,19 +59,7 @@ export default function Navbar({ loggedIn }: NavProps) {
 
         {!loggedIn && (
           <>
-            <button
-              type="button"
-              className="hidden font-semibold text-base border border-transparent hover:border hover:border-slate-200 sm:inline-flex justify-center items-center gap-2 focus:outline-none text-slate-300 rounded-3xl py-2.5 px-5"
-            >
-              Log in
-            </button>
-
-            <button
-              type="button"
-              className="hidden rounded-full sm:flex bg-blue-600 hover:bg-blue-500 text-white border-transparent focus:dark:bg-blue-600 focus:ring focus:ring-offset-2 focus:ring-offset-slate-400 focus:ring-blue-600 dark:focus:ring-offset-slate-400 disabled:bg-blue-200 disabled:cursor-not-allowed disabled:dark:bg-blue-900 disabled:dark:text-slate-400 text-base py-2.5 px-5"
-            >
-              Sign up
-            </button>
+            <Wallet />
           </>
         )}
 

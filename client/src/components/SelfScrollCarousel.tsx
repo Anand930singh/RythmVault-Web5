@@ -122,9 +122,9 @@ export default function SelfScrollCarousel({ img }: SelfScrollCarouselProps) {
             <p className="font-semibold whitespace-nowrap text-lg">
               {img[index].topic}
             </p>
-            <div className="flex text-white text-base gap-2">
-              <div>{img[index].items} items</div>
-              <div>Floor {img[index].floor}</div>
+            <div className="flex text-white text-sm gap-2">
+              <div className="whitespace-nowrap">{img[index].items} items</div>
+              <div className="whitespace-nowrap">Floor {img[index].floor}</div>
             </div>
           </motion.div>
 
