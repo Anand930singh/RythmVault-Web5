@@ -18,9 +18,9 @@ export default function Tabs({ tabsList }: TabsListProps) {
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="flex space-x-1 p-1 w-fit rounded-lg bg-[rgba(255,255,255,.04)]">
-        {tabsList.map((tab) => (
+        {tabsList.map((tab, index) => (
           <button
-            key={tab.id}
+            key={index}
             onClick={() => setActiveTab(tab.id)}
             className={`${
               activeTab === tab.id ? "" : "hover:text-white/60"
