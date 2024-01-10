@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Profile from "./components/Profile";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -21,7 +22,7 @@ export default function App() {
       <Navbar loggedIn={loggedIn} />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/profile" element={<Profile />} /> */}
+        <Route path="/profile" element={<Profile />} />
         <Route path="/upload" element={<Upload />} />
       </Routes>
       <Footer />

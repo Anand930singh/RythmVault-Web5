@@ -62,6 +62,7 @@ export default function Trending() {
                   row={row}
                   index={index}
                   amt={1}
+                  key={index}
                   isWideScreen={isWideScreen}
                 />
               ))
@@ -70,6 +71,7 @@ export default function Trending() {
                   row={row}
                   index={index}
                   amt={1}
+                  key={index}
                   isWideScreen={isWideScreen}
                 />
               ))}
@@ -120,6 +122,7 @@ export default function Trending() {
             <TableComponent
               row={row}
               index={index}
+              key={index}
               amt={6}
               isWideScreen={isWideScreen}
             />
